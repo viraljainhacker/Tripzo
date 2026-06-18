@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TRIPZO Ticket</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="ticket" id="ticketCard">
+      <div class="ticket-header">
+        <img src="logo.png" width="80" />
+        <p>E-Ticket</p>
+      </div>
+
+      <div class="ticket-body">
+        <img id="ticketQR" />
+        <div class="row">
+          <span>Name</span>
+          <strong id="tName"></strong>
+        </div>
+
+        <div class="row">
+          <span>Mobile</span>
+          <strong id="tMobile"></strong>
+        </div>
+
+        <div class="row">
+          <span>Route</span>
+          <strong id="tRoute"></strong>
+        </div>
+
+        <div class="row">
+          <span>Seat No.</span>
+          <strong id="tSeat"></strong>
+        </div>
+
+        <div class="row">
+          <span>Fare</span>
+          <strong id="tFare"></strong>
+        </div>
+
+        <div class="row">
+          <span>Booking ID</span>
+          <strong id="bookingId"></strong>
+        </div>
+
+        <div class="journey">🚌 Safe Journey with TRIPZO</div>
+      </div>
+
+      <div class="ticket-footer">Thank you for choosing TRIPZO</div>
+    </div>
+
+    <div class="btns">
+      <button onclick="downloadTicket()">Download Ticket</button>
+      <button onclick="shareTicket()">Share Ticket</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

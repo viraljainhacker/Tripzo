@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Payment - TRIPZO</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <div class="payment">
+      <h1>TRIPZO Payment</h1>
+      <h2>Scan QR to Pay</h2>
+
+      <p id="details"></p>
+
+      <img id="qr" width="250" height="250" alt="UPI QR" />
+
+      <div id="success" style="display: none; color: green; font-weight: bold">
+        Payment Successful 🎉
+      </div>
+
+      <button onclick="paid()">I Have Paid</button>
+    </div>
+
+    <script>
+      let fare = localStorage.getItem("totalFare");
+      let route = localStorage.getItem("route");
+      let seat = localStorage.getItem("finalSeat");
+
+      // safety check
+      if (!fare || !route || !seat) {
+        alert("Booking data missing!");
+        window.location.href = "booking.html";
+      }
+
+      document.getElementById("details").innerText =
+        route + " | Seat " + seat + " | ₹" + fare;
+
+      const upiId = "9352378293@hdfc";
+
+      const upiUrl = `upi://pay?pa=${upiId}&pn=TRIPZO&am=${fare}&cu=INR`;
+
+      // DEBUG (important)
+      console.log("UPI URL:", upiUrl);
+
+      const qrImg = document.getElementById("qr");
+
+      qrImg.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" +
+        encodeURIComponent(upiUrl);
+
+      qrImg.onerror = function () {
+        alert("QR load failed. Check internet or API.");
+      };
+
+      function paid() {
+        localStorage.setItem("paymentStatus", "done");
+
+        document.getElementById("success").style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "ticket.html";
+        }, 1500);
+      }
+    </script>
+  </body>
+</html>

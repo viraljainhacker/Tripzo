@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">TRIPZO</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routes.html">Routes</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- HERO -->
+    <section class="booking-hero">
+      <h1>Book Your Bus</h1>
+      <p>Fill in your details to book</p>
+    </section>
+    <section class="booking">
+      <input type="text" id="name" placeholder="Enter Name" />
+      <input type="number" id="mobile" placeholder="Mobile Number" />
+
+      <select id="route">
+        <option value="">Select Route</option>
+        <option value="Delhi → Jaipur" data-fare="499">Delhi → Jaipur</option>
+        <option value="Delhi → Agra" data-fare="399">Delhi → Agra</option>
+        <option value="Udaipur → Delhi" data-fare="1500">
+          Udaipur → Delhi
+        </option>
+        <option value="Udaipur → Mumbai" data-fare="999">
+          Udaipur → Mumbai
+        </option>
+        <option value="Udaipur → Indore" data-fare="1000">
+          Udaipur → Indore
+        </option>
+        <option value="Udaipur → Agra" data-fare="399">Udaipur → Agra</option>
+        <option value="Udaipur → Jaipur" data-fare="800">
+          Udaipur → Jaipur
+        </option>
+        <option value="Jaipur → Indore" data-fare="1100">
+          Jaipur → Indore
+        </option>
+        <option value="Mumbai → Udaipur" data-fare="999">
+          Mumbai → Udaipur
+        </option>
+        <option value="Agra → Jaipur" data-fare="900">Agra → Jaipur</option>
+        <option value="Jaipur → Agra" data-fare="900">Jaipur → Agra</option>
+        <option value="Indore → Jaipur" data-fare="1100">
+          Indore → Jaipur
+        </option>
+        <option value="Indore → Udaipur" data-fare="1000">
+          Indore → Udaipur
+        </option>
+        <option value="Indore → Agra" data-fare="700">Indore → Agra</option>
+        <option value="Indore → Delhi" data-fare="1200">Indore → Delhi</option>
+        <option value="Agra → Indore" data-fare="700">Agra → Indore</option>
+        <option value="Delhi → Indore" data-fare="1200">Delhi → Indore</option>
+        <option value="Agra → Delhi" data-fare="399">Agra → Delhi</option>
+        <option value="Jaipur → Delhi" data-fare="499">Jaipur → Delhi</option>
+        <option value="Mumbai → Jaipur" data-fare="800">Mumbai → Jaipur</option>
+        <option value="Mumbai → Indore" data-fare="1100">
+          Mumbai → Indore
+        </option>
+        <option value="Delhi → Mumbai" data-fare="999">Delhi → Mumbai</option>
+        <option value="Agra → Mumbai" data-fare="999">Agra → Mumbai</option>
+        <option value="Jaipur → Mumbai" data-fare="800">Jaipur → Mumbai</option>
+        <option value="Indore → Mumbai" data-fare="1100">
+          Indore → Mumbai
+        </option>
+        <option value="Delhi → Udaipur" data-fare="1500">
+          Delhi → Udaipur
+        </option>
+        <option value="Agra → Udaipur" data-fare="399">Agra → Udaipur</option>
+        <option value="Jaipur → Udaipur" data-fare="800">
+          Jaipur → Udaipur
+        </option>
+        <option value="Mumbai → Delhi" data-fare="999">Mumbai → Delhi</option>
+        <option value="Mumbai → Agra" data-fare="999">Mumbai → Agra</option>
+      </select>
+
+      <button onclick="goToSeats()">Continue</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
