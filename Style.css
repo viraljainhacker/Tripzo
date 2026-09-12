@@ -1295,3 +1295,242 @@ button:hover {
     margin: 0 auto;
   }
 }
+
+/* =====================================
+   MOBILE NAVBAR FIX
+===================================== */
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 900px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar {
+    width: 100%;
+    height: 75px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+
+  .logo {
+    font-size: 28px;
+  }
+
+
+  .book-btn {
+    display: none;
+  }
+
+
+  .menu-btn {
+    display: block;
+    color: #0b3d91;
+  }
+
+
+  /* MOBILE MENU */
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+    top: 75px;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    padding: 20px 0;
+    margin: 0;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 9998;
+  }
+
+
+  /* VERY IMPORTANT */
+
+  .nav-links.active {
+    display: flex;
+  }
+
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    box-sizing: border-box;
+  }
+
+
+  /* =====================================
+     HERO - NAVBAR OVERLAP FIX
+  ===================================== */
+
+  .hero {
+    min-height: auto;
+
+    padding: 130px 20px 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+
+  .hero-left {
+    width: 100%;
+  }
+
+
+  .hero-left h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+
+  .hero-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0 0;
+  }
+
+
+  .hero-right {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+
+  .hero-right img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+
+  /* FEATURES */
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+
+
+  /* WHY */
+
+  .why-us {
+    padding: 50px 20px;
+  }
+
+
+  .why-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+
+  /* ROUTES */
+
+  .routes {
+    padding: 50px 20px;
+  }
+
+
+  .route-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  /* REVIEWS */
+
+  .testimonials {
+    padding: 50px 20px;
+  }
+
+
+  .review-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .review {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 500px) {
+
+  .logo {
+    font-size: 25px;
+  }
+
+
+  .hero-left h1 {
+    font-size: 34px;
+  }
+
+
+  .hero-left p {
+    font-size: 15px;
+  }
+
+
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+
+}
